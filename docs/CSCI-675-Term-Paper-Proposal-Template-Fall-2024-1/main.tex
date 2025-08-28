@@ -1,0 +1,50 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{csci475_termpaper,times}
+\usepackage{hyperref}
+\usepackage{url}
+
+\title{Term Paper Proposal: Using ML for Fall Detection}
+
+\author{
+Prasun Dhungana \\
+\texttt{prasun.dhungana@bison.howard.edu} \\
+Manish Adhikari \\
+\texttt{manish.adhikari@bison.howard.edu} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Our project aims to develop a machine learning model that utilizes image frames to detect falls in real-time. We will be leveraging the URFD dataset, which provides video frames labeled for fall and non-fall instances, to create a reliable and efficient fall detection system.
+\end{abstract}
+
+\section{Introduction/Motivation}
+Falls among the elderly, either at their residence, or a care center, are a significant health and safety concern, often leading to severe injuries and decreased quality of life. The goal of our project is to develop a machine learning-based fall detection system that can improve response times in emergencies. By focusing solely on image frames from the rich URFD dataset, we intend to create a robust model capable of accurately classifying fall and non-fall instances.
+
+\section{Baseline or Initial Experiments}
+To start, we will conduct exploratory data analysis on the URFD dataset to understand how the fall and non-fall instances are distributed. Our initial experiments will involve training a simple Convolutional Neural Network (CNN) on static images to establish a baseline for our model's performance. We will evaluate the model's performance on accuracy and loss metrics to ensure a solid foundation for further development.
+
+\section{Final Experiments}
+After establishing our baseline, we will extend our approach by implementing a more complex CNN architecture that can effectively leverage the visual information present in the images. Our final evaluation will focus on accuracy, precision, and recall metrics to assess the model’s performance. We will also experiment with data augmentation techniques to enhance the robustness of our model.
+
+\section{Final Goals \& Evaluation}
+By the end of the semester, we hope to achieve a functional fall detection model that performs with at least 85\% accuracy on the validation set. We will evaluate our experiments based on accuracy, precision, and recall metrics, ensuring a comprehensive understanding of our model's performance. We plan to report our results on both baseline and advanced models, targeting a more ambitious outcome for the latter.
+
+\section{Related Work}
+Previous studies have explored various approaches to fall detection using computer vision and machine learning. For instance, [Author, Year] discusses the use of CNNs for image-based fall detection, highlighting the importance of temporal information. [Another Author, Year] examines the impact of feature engineering in improving model performance for similar tasks. These works will guide our methodology and help refine our approach.
+
+\section{Data \& Technical Requirements}
+We will utilize the URFD dataset, which contains images labeled for fall and non-fall instances. The primary software libraries will include TensorFlow or PyTorch for model development, along with pandas for data manipulation and OpenCV for image processing. Access to a GPU-enabled environment (such as Google Colab) will also be beneficial for training our models.
+
+% You should cite all sources mentioned in this proposal in the file 11785_project.bib
+% If you don't wish to cite some of your sources inline (e.g. in the Related Work section) using \cite{}, just you nocite to add
+% them to the references section at the end of your proposal like so.
+\nocite{Bengio+chapter2007}
+\nocite{Hinton06}
+
+\bibliography{csci675_termpaper}
+\bibliographystyle{csci675_termpaper}
+
+\end{document}
